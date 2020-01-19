@@ -46,5 +46,6 @@
   },
   "peerDependencies": {
     "react": ">=16.8.0"
-  }
+  },
+  "typings": "./lib/index.d.ts"
 }

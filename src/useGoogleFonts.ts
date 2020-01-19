@@ -57,4 +57,5 @@ const useGoogleFonts = (
   }, [fontsArray])
 }
 
+export { Font, Options }
 export default useGoogleFonts
