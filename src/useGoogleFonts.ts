@@ -17,15 +17,15 @@ import { Font, Options, defaultOptions } from './types'
  * ])
  * ```
  *
- * @param fontsArray Array of Google fonts and sizes
+ * @param fonts Array of Google fonts and sizes
  * @param options Options
  * @returns void
  */
 const useGoogleFonts = (
-  fontsArray: Array<Font>,
+  fonts: Font[],
   options: Options = defaultOptions
 ): void => {
-  const fontsWithSizes = fontsArray.map((fontArray) => {
+  const fontsWithSizes = fonts.map((fontArray) => {
     const font = fontArray[0].replace(new RegExp(' ', 'g'), '+')
     let sizes = ''
 
@@ -46,7 +46,7 @@ const useGoogleFonts = (
 
     document.head.appendChild(link)
 
-    fontsArray.map(async (font) => {
+    fonts.map(async (font) => {
       const fontClass = font[0].replace(new RegExp(' ', 'g'), '-')
       const fontFace = new FontFaceObserver(font[0])
       await fontFace.load()
@@ -54,7 +54,7 @@ const useGoogleFonts = (
         document.documentElement.classList.add(fontClass.toLowerCase())
       }
     })
-  }, [fontsArray])
+  }, [fonts])
 }
 
 export { Font, Options }
