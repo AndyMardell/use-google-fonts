@@ -103,6 +103,10 @@ class App extends React.Component {
 
 ## Changelog
 
+### 1.1.0 (22 December 2021)
+
+- Updated to React ^17.0.2
+
 ### 1.0.2 (20 January 2020)
 
 - Added a JSX component as an alternative to the hook
