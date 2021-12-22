@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2015",
     "outDir": "./lib",
     "module": "commonjs",
     "strict": true,
@@ -10,6 +10,6 @@
     "jsx": "react",
     "declaration": true
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "./lib/**/*"],
   "include": ["**/*.ts", "**/*.tsx"]
 }
